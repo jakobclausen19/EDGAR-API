@@ -2,7 +2,7 @@ services:
     api:
         build: .
         environment:
-            SEC_USER_AGENT: "My Filings App contact@example.com"
+            SEC_USER_AGENT: "${SEC_USER_AGENT:-EDGAR API contact@example.com}"
         ports:
             - "3000:3000"
         volumes:

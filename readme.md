@@ -21,6 +21,10 @@ npm test
 docker compose up --build
 ```
 
+During startup, the service sends `SEC_USER_AGENT` in the HTTP `User-Agent` header on each request to EDGAR. It identifies the application and gives the SEC an email address to contact about its traffic.
+
+Compose uses the placeholder `EDGAR API contact@example.com` by default. To supply your own details, copy [.env.example](.env.example) to `.env` in the repository root and replace the example email with a monitored address before starting Compose. You can also export `SEC_USER_AGENT` in your shell.
+
 Run `docker compose down` to stop and remove the container. The named volume retains the database under `/app/data`.
 
 ## Interactive API documentation

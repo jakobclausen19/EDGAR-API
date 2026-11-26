@@ -56,6 +56,6 @@ Use a single `src/common/` directory for domain-independent concerns such as sha
 
 ## Running the API
 
-Use Node 22 LTS for local development. Set `SEC_USER_AGENT` to your application name and monitored contact email before starting the service. From the repository root, run `npm ci`, `npm run build`, then `npm start`. For Docker, set the same environment variable and run `docker compose up --build`. The service listens on port 3000 after a successful full-history import.
+Use Node 22 LTS for local development. Set `SEC_USER_AGENT` to `EDGAR API` followed by a space and your monitored contact email before starting the service. From the repository root, run `npm ci`, `npm run build`, then `npm start`. For Docker, set the same environment variable and run `docker compose up --build`. The service listens on port 3000 after a successful full-history import.
 
 Run `npm test` for fixture-backed integration tests and `npm run lint` for the TypeScript lint checks. The tests use an in-memory SQLite database. The [decision log](improvments.md) records the live historical data issues discovered during implementation.
