@@ -1,0 +1,11 @@
+services:
+    api:
+        build: .
+        environment:
+            SEC_USER_AGENT: "My Filings App contact@example.com"
+        ports:
+            - "3000:3000"
+        volumes:
+            - filings:/app/data
+volumes:
+    filings:

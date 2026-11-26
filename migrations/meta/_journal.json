@@ -1,0 +1,27 @@
+{
+  "version": "7",
+  "dialect": "sqlite",
+  "entries": [
+    {
+      "idx": 0,
+      "version": "6",
+      "when": 1795555200000,
+      "tag": "0000_companies",
+      "breakpoints": true
+    },
+    {
+      "idx": 1,
+      "version": "6",
+      "when": 1795555200001,
+      "tag": "0001_optional_document",
+      "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "when": 1795555200002,
+      "version": "6",
+      "tag": "0002_company_filings",
+      "breakpoints": true
+    }
+  ]
+}
