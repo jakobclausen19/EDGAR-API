@@ -15,11 +15,13 @@ npm test
 
 ## Start the service
 
-**With Docker Compose**, start Docker and run the following from the repository root. The foreground logs show migration and import errors.
+**With Docker Compose**, start Docker and make sure port 3000 is available. The first build needs internet access to download the image and packages. Every startup needs HTTPS access to `data.sec.gov` to import the filing histories. Run this from the repository root:
 
 ```sh
 docker compose up --build
 ```
+
+Wait for `API is ready` in the logs before opening Swagger or running the examples below. The API starts listening after the import completes.
 
 During startup, the service sends `SEC_USER_AGENT` in the HTTP `User-Agent` header on each request to EDGAR. It identifies the application and gives the SEC an email address to contact about its traffic.
 
